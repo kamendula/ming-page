@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="补明史传记 - 明代人物传记阅读网站">
+    <title>补明史传记</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="config.js"></script>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <header class="top-header">
+        <div class="header-left">
+            <h1 class="site-title">📚 <span id="siteTitle">补明史传记</span></h1>
+        </div>
+        <div class="header-right">
+            <div class="font-controls">
+                <label>字号</label>
+                <button onclick="changeFontSize(-1)" title="减小字号">-</button>
+                <span id="fontSizeDisplay">中</span>
+                <button onclick="changeFontSize(1)" title="增大字号">+</button>
+            </div>
+            <button onclick="toggleTheme()" id="themeBtn" class="theme-btn" title="切换主题">
+                🌙 深色
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- 左侧列表栏 -->
+        <aside class="sidebar">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 搜索传记..." />
+            </div>
+            
+            <nav class="doc-list" id="docList">
+                <div class="loading">加载中...</div>
+            </nav>
+            
+            <div class="sidebar-footer" id="statsFooter">
+                <span>共 <strong id="totalCount">0</strong> 篇</span>
+            </div>
+        </aside>
+
+        <!-- 中间阅读区 -->
+        <main class="main-content">
+            <div id="welcomeScreen" class="welcome">
+                <h2>欢迎阅读补明史传记</h2>
+                <p class="welcome-desc">请从左侧选择一篇传记开始阅读</p>
+                <div class="welcome-stats" id="welcomeStats"></div>
+            </div>
+
+            <article id="articleContent" class="article hidden">
+                <header class="article-header">
+                    <h1 id="articleTitle"></h1>
+                    <div class="article-meta">
+                        <span id="articleSubject"></span>
+                        <span id="articleAuthor"></span>
+                        <span id="articleDate"></span>
+                    </div>
+                </header>
+
+                <div class="article-body" id="articleBody"></div>
+
+                <section class="article-notes hidden" id="articleNotesSection">
+                    <h3>【注释】</h3>
+                    <div id="articleNotes"></div>
+                </section>
+            </article>
+        </main>
+
+        <!-- 右侧信息栏 -->
+        <aside class="sidebar-right">
+            <!-- 注释导航 -->
+            <div class="info-section hidden" id="notesNavSection">
+                <h3>注释导航</h3>
+                <div id="notesNavList" class="notes-nav-list"></div>
+            </div>
+
+            <!-- 文档信息 -->
+            <div class="info-section hidden" id="docInfoSection">
+                <h3>文档信息</h3>
+                <div id="docInfo" class="doc-info-card"></div>
+            </div>
+
+            <!-- Google AdSense 广告位 1 -->
+            <div class="info-section ad-section" id="adSection1"></div>
+
+            <!-- 项目信息 -->
+            <div class="info-section" id="projectInfoSection">
+                <h3>项目信息</h3>
+                <div id="projectInfo" class="project-info"></div>
+            </div>
+
+            <!-- Google AdSense 广告位 2 -->
+            <div class="info-section ad-section" id="adSection2"></div>
+
+            <!-- 联系方式 -->
+            <div class="info-section" id="contactSection">
+                <h3>联系我们</h3>
+                <div id="contactInfo" class="contact-info"></div>
+            </div>
+
+            <!-- 自定义推广 -->
+            <div class="info-section" id="promotionSection"></div>
+        </aside>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

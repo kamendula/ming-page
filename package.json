@@ -1,0 +1,16 @@
+{
+  "name": "ming-page",
+  "version": "1.0.0",
+  "description": "明代人物传记阅读网站",
+  "scripts": {
+    "convert": "node scripts/convert.js",
+    "dev": "npx http-server public -p 3000 -o"
+  },
+  "keywords": ["传记", "明史", "历史"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "mammoth": "^1.6.0"
+  }
+}
+
