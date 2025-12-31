@@ -4,7 +4,7 @@ const path = require("path");
 
 // 配置路径
 const DOC_DIR = path.join(__dirname, "..", "doc");
-const OUTPUT_DIR = path.join(__dirname, "..", "public", "data");
+const OUTPUT_DIR = path.join(__dirname, "..", "docs", "data");
 
 // 确保输出目录存在
 if (!fs.existsSync(OUTPUT_DIR)) {

@@ -31,14 +31,14 @@ jobs:
       - name: Check for changes
         id: check_changes
         run: |
-          git diff --quiet public/data/ || echo "changed=true" >> $GITHUB_OUTPUT
+          git diff --quiet docs/data/ || echo "changed=true" >> $GITHUB_OUTPUT
       
       - name: Commit and push JSON files
         if: steps.check_changes.outputs.changed == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add public/data/
+          git add docs/data/
           git commit -m "🤖 自动转换: Word → JSON [$(date +'%Y-%m-%d %H:%M:%S')]"
           git push
 

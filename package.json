@@ -4,7 +4,7 @@
   "description": "明代人物传记阅读网站",
   "scripts": {
     "convert": "node scripts/convert.js",
-    "dev": "npx http-server public -p 3000 -o"
+    "dev": "npx http-server docs -p 3000 -o"
   },
   "keywords": ["传记", "明史", "历史"],
   "author": "",
